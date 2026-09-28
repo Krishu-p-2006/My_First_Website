@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post — Krishu Prajapati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">KP</span> Krishu Prajapati</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<section style="padding-top:48px;">
+  <div class="wrap" style="max-width:760px;">
+    <a href="blog.html" class="btn btn-ghost" style="margin-bottom:36px;"><i class="ti ti-arrow-left"></i> Back to blog</a>
+    <article id="postBody">
+      <div class="skeleton" style="height:24px;width:140px;margin-bottom:18px;"></div>
+      <div class="skeleton" style="height:42px;margin-bottom:24px;"></div>
+      <div class="skeleton" style="height:300px;"></div>
+    </article>
+  </div>
+</section>
+
+<footer style="margin-top:64px;">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><span class="mark" style="background:transparent;border-color:var(--paper);color:var(--paper);">KP</span> Krishu Prajapati</div>
+        <p style="opacity:.75;max-width:32ch;font-size:14px;">DSA notes and tech logs from a self-taught BCA student.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <div class="foot-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="foot-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span class="year"></span> Krishu Prajapati</span>
+      <span>Built from scratch · HTML, CSS, JS &amp; Firebase</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module">
+  import { loadSingle } from "./js/blog.js";
+  loadSingle();
+</script>
+</body>
+</html>

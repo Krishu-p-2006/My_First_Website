@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Krishu Prajapati</title>
+<meta name="description" content="Daily notes on DSA, programming concepts and tech updates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .filter-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+  .filter-btn{
+    font-family:var(--font-mono); font-size:13px;
+    padding:9px 16px; border:1.5px solid var(--line); border-radius:999px;
+    background:var(--white); color:var(--ink-soft);
+  }
+  .filter-btn.active{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">KP</span> Krishu Prajapati</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<header class="page-head grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">Blog</div>
+    <h1>DSA notes, concepts &amp; tech logs.</h1>
+    <p>Written the same day I learn it — not polished, just honest notes from the process.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="DSA">DSA</button>
+      <button class="filter-btn" data-cat="Tech News">Tech News</button>
+      <button class="filter-btn" data-cat="Concept">Concepts</button>
+    </div>
+    <div class="card-grid" id="allPosts">
+      <div class="skeleton" style="height:200px;"></div>
+      <div class="skeleton" style="height:200px;"></div>
+      <div class="skeleton" style="height:200px;"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><span class="mark" style="background:transparent;border-color:var(--paper);color:var(--paper);">KP</span> Krishu Prajapati</div>
+        <p style="opacity:.75;max-width:32ch;font-size:14px;">DSA notes and tech logs from a self-taught BCA student.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <div class="foot-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="foot-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span class="year"></span> Krishu Prajapati</span>
+      <span>Built from scratch · HTML, CSS, JS &amp; Firebase</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module">
+  import { loadAll, renderFiltered } from "./js/blog.js";
+  loadAll();
+  document.getElementById("filterRow").addEventListener("click", e => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderFiltered(btn.dataset.cat);
+  });
+</script>
+</body>
+</html>

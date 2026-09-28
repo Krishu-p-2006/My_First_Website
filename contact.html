@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Krishu Prajapati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-layout{ display:grid; grid-template-columns:1fr 1.3fr; gap:48px; }
+  @media (max-width:760px){ .contact-layout{ grid-template-columns:1fr; } }
+  .contact-link{ display:flex; align-items:center; gap:12px; padding:14px 0; border-bottom:1px dashed var(--line); font-size:15px; }
+  .contact-link i{ font-size:18px; color:var(--accent-deep); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">KP</span> Krishu Prajapati</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<header class="page-head grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h1>Got a question, or just want to connect?</h1>
+    <p>Whether it's about a post, a project, or a placement opportunity — I read everything that comes through here.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap contact-layout">
+    <div>
+      <a class="contact-link" href="mailto:your.email@example.com"><i class="ti ti-mail"></i> your.email@example.com</a>
+      <a class="contact-link" href="#"><i class="ti ti-brand-github"></i> github.com/yourusername</a>
+      <a class="contact-link" href="#"><i class="ti ti-brand-linkedin"></i> linkedin.com/in/yourusername</a>
+      <div class="contact-link" style="border-bottom:none;"><i class="ti ti-map-pin"></i> Varanasi, Uttar Pradesh</div>
+    </div>
+
+    <form id="contactForm">
+      <div class="field">
+        <label for="cName">Name</label>
+        <input type="text" id="cName" required>
+      </div>
+      <div class="field">
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail" required>
+      </div>
+      <div class="field">
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit"><i class="ti ti-send"></i> Send message</button>
+      <div class="status-msg" id="contactStatus"></div>
+    </form>
+  </div>
+</section>
+
+<footer style="margin-top:24px;">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><span class="mark" style="background:transparent;border-color:var(--paper);color:var(--paper);">KP</span> Krishu Prajapati</div>
+        <p style="opacity:.75;max-width:32ch;font-size:14px;">DSA notes and tech logs from a self-taught BCA student.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <div class="foot-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="foot-links">
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span class="year"></span> Krishu Prajapati</span>
+      <span>Built from scratch · HTML, CSS, JS &amp; Firebase</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>

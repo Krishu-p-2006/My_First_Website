@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishu Prajapati — DSA notes, tech logs &amp; projects</title>
+<meta name="description" content="BCA student building in public — daily DSA notes, programming concepts and tech updates, plus self-taught projects on the road to NIMCET and top tech placements.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">KP</span> Krishu Prajapati</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<section class="hero grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">BCA student · building in public</div>
+    <h1>Solving problems, <span class="accent">one post</span> at a time.</h1>
+    <p class="lead">I'm Krishu — a BCA student documenting my self-taught journey through DSA, C/C++, and web development, on the road to NIMCET and a top tech placement. New notes, almost every day.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="blog.html"><i class="ti ti-notebook"></i> Read latest notes</a>
+      <a class="btn btn-ghost" href="projects.html"><i class="ti ti-folder"></i> See projects</a>
+    </div>
+
+    <div class="streak">
+      <div class="streak-head">
+        <h3>Daily build streak</h3>
+        <span class="streak-stat" id="streakStat">loading…</span>
+      </div>
+      <div class="streak-grid" id="streakGrid"></div>
+      <div class="streak-legend">
+        Less
+        <span class="cell"></span><span class="cell l1"></span><span class="cell l2"></span><span class="cell l3"></span>
+        More
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Who's writing this</div>
+        <h2>A BCA student, doing the placement prep my college doesn't.</h2>
+      </div>
+      <a class="btn btn-ghost" href="about.html">Full story <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <p style="max-width:62ch;color:var(--ink-soft);font-size:16.5px;margin-bottom:24px;">
+      My college doesn't run campus placements, so I'm building my own path — DSA practice, C++, web development, and writing things down so the next student doesn't have to start from zero either.
+    </p>
+    <div class="chip-row">
+      <span class="chip">C / C++</span>
+      <span class="chip">Data Structures &amp; Algorithms</span>
+      <span class="chip">HTML / CSS / JS</span>
+      <span class="chip">Problem Solving</span>
+      <span class="chip">NIMCET prep</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">From the blog</div>
+        <h2>Latest notes</h2>
+      </div>
+      <a class="btn btn-ghost" href="blog.html">View all <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="card-grid" id="latestPosts">
+      <div class="skeleton" style="height:200px;"></div>
+      <div class="skeleton" style="height:200px;"></div>
+      <div class="skeleton" style="height:200px;"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">What I've built</div>
+        <h2>Featured projects</h2>
+      </div>
+      <a class="btn btn-ghost" href="projects.html">All projects <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="card-grid">
+      <a class="card bracket" href="projects.html">
+        <span class="tag">Web · HTML/CSS/JS</span>
+        <h3>KP Study Hub</h3>
+        <p>A self-built study resource site for fellow BCA students — notes, trackers, and quick-revision sheets in one place.</p>
+        <span class="read-link">View project <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a class="card bracket" href="projects.html">
+        <span class="tag">DSA · Interactive</span>
+        <h3>DSA 100-problem tracker</h3>
+        <p>An interactive tracker to log progress across 100 hand-picked DSA problems, built mobile-first.</p>
+        <span class="read-link">View project <i class="ti ti-arrow-right"></i></span>
+      </a>
+      <a class="card bracket" href="projects.html">
+        <span class="tag">C / OOP</span>
+        <h3>OOP in C++ concept map</h3>
+        <p>A visual reference mapping out core object-oriented programming concepts in C++.</p>
+        <span class="read-link">View project <i class="ti ti-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo" style="margin-bottom:14px;"><span class="mark" style="background:transparent;border-color:var(--paper);color:var(--paper);">KP</span> Krishu Prajapati</div>
+        <p style="opacity:.75;max-width:32ch;font-size:14px;">DSA notes and tech logs from a self-taught BCA student.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <div class="foot-links">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <div class="foot-links">
+          <a href="#"><!-- apna GitHub link daalo -->GitHub</a>
+          <a href="#"><!-- apna LinkedIn link daalo -->LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span class="year"></span> Krishu Prajapati</span>
+      <span>Built from scratch · HTML, CSS, JS &amp; Firebase</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module">
+  import { loadLatest, renderStreak } from "./js/blog.js";
+  loadLatest();
+  renderStreak();
+</script>
+</body>
+</html>

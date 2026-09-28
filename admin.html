@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Krishu Prajapati</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark">KP</span> Krishu Prajapati</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<header class="page-head grid-bg">
+  <div class="wrap">
+    <div class="eyebrow">Admin · private</div>
+    <h1>Post manager</h1>
+    <p>Sirf tum dekh sakte ho ye page — login karke naya post daalo ya purane edit karo.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap" style="max-width:680px;">
+
+    <div id="loginSection">
+      <form id="loginForm">
+        <div class="field">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required>
+        </div>
+        <div class="field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required>
+        </div>
+        <button class="btn btn-primary" type="submit"><i class="ti ti-lock-open"></i> Log in</button>
+        <div class="status-msg err" id="loginError">Login fail ho gaya — email/password check karo.</div>
+      </form>
+    </div>
+
+    <div id="adminSection" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+        <h2 id="formTitle" style="font-size:22px;">Naya post likho</h2>
+        <button class="btn btn-ghost" id="logoutBtn"><i class="ti ti-logout"></i> Log out</button>
+      </div>
+
+      <form id="postForm">
+        <div class="field">
+          <label for="fTitle">Title</label>
+          <input type="text" id="fTitle" required>
+        </div>
+        <div class="field">
+          <label for="fCategory">Category</label>
+          <select id="fCategory">
+            <option value="DSA">DSA</option>
+            <option value="Tech News">Tech News</option>
+            <option value="Concept">Concept</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fExcerpt">Short excerpt (card preview ke liye, 1-2 lines)</label>
+          <textarea id="fExcerpt" style="min-height:70px;"></textarea>
+        </div>
+        <div class="field">
+          <label for="fContent">Full content</label>
+          <textarea id="fContent" required style="min-height:260px;"></textarea>
+        </div>
+        <div class="field">
+          <label for="fTags">Tags (comma se separate karo)</label>
+          <input type="text" id="fTags" placeholder="arrays, two-pointer, leetcode">
+        </div>
+        <div style="display:flex;gap:12px;">
+          <button class="btn btn-primary" type="submit"><i class="ti ti-upload"></i> Publish</button>
+          <button class="btn btn-ghost" type="button" id="cancelEditBtn" style="display:none;">Cancel edit</button>
+        </div>
+        <div class="status-msg" id="postStatus"></div>
+      </form>
+
+      <div style="margin-top:56px;">
+        <h2 style="font-size:20px;margin-bottom:20px;">Tumhare posts</h2>
+        <div id="postsList" style="display:flex;flex-direction:column;gap:12px;"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer style="margin-top:48px;">
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:none;padding-top:0;">
+      <span>© <span class="year"></span> Krishu Prajapati</span>
+      <span>Admin panel · private</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
